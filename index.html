@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" ng-app="app" ng-strict-di>
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap-theme.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> -->
+    <link href="fonts/Shrikhand/Shrikhand-Regular.ttf" rel="stylesheet">
+    <link href="fonts/spac3-tech/spac3-tech.ttf" rel="stylesheet">
+    <link href="fonts/digital-tech/digital-tech.otf" rel="stylesheet">
+    <link href="fonts/gtek-tech/gtek-tech.ttf" rel="stylesheet">
+    <link href="fonts/great-vibes/great-vibes.ttf" rel="stylesheet">
+    
+    <!-- <link rel="stylesheet" href="styles/app.css"> -->
+    <link rel="stylesheet" href="styles/public.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+  <div class="header">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!--<nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <div class="navbar-header">-->
+                  <a class="navbar-brand" ui-sref="app"  style="padding:0 0 0 10px;">
+                    <img alt="Brand" class="img-responsive" src="images/code3.jpg"  width="80">
+                  </a>
+                <!--</div>
+              </div>
+        </nav>-->
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li ui-sref-active="active"><a ui-sref="home" class="first">Home<span class="sr-only">(current)</span></a></li>
+            <li ui-sref-active="active"><a ui-sref="projects">Projects</a></li>
+            <li ui-sref-active="active"><a ui-sref="about">About</a></li>
+            <li ui-sref-active="active"><a ui-sref="contact">Contact</a></li>
+            <li ui-sref-active="active"><a ui-sref="awards">Awards</a></li>
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </div>
+
+
+    <div class="container-fluid">
+        <ui-view></ui-view>
+    </div>
+
+    <footer>
+      <div class="container-fluid">
+        <p>I <span class="glyphicon glyphicon-heart"></span> code</p>
+      </div>
+    </footer>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+      <script src="lib/angular/angular.min.js"></script>
+      <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+      
+      <script src="lib/jquery/dist/jquery.min.js"></script>
+      <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+      
+
+      <script src="src/app.module.js"></script>
+
+      <script src="src/public/public.module.js"></script>
+      <script src="src/public/public.routes.js"></script>
+
+      <script src="src/services/projects.service.js"></script>
+
+      <script src="src/public/home/home.controller.js"></script>
+      <script src="src/public/about/about.controller.js"></script>
+      <script src="src/public/projects/projects.controller.js"></script>
+      <script src="src/public/contact/contact.controller.js"></script>
+      <script src="src/public/awards/awards.controller.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

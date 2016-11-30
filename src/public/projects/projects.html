@@ -1,0 +1,51 @@
+<div class="projects">
+  <div class="projects-content">
+
+    <h1> Lets talk <b><i>Projects!<i><b> </h1>
+
+
+
+    <div class="row projects-row">
+      <div class="col-sm-12">
+
+        <ul class="nav nav-tabs" role="tablist">
+           <li role="presentation" ng-class="{active:projectsCtrl.isActiveTab(0)}">
+            <a ng-click="projectsCtrl.selectedTab(0)" aria-controls="all" role="tab">All</a>
+          </li>
+          <li role="presentation" ng-class="{active:projectsCtrl.isActiveTab(1)}">
+            <a ng-click="projectsCtrl.selectedTab(1)" aria-controls="favorites" role="tab">My Favorites</a>
+          </li>
+          <li role="presentation" ng-class="{active:projectsCtrl.isActiveTab(2)}">
+            <a ng-click="projectsCtrl.selectedTab(2)" aria-controls="website" role="tab">Websites</a>
+          </li>
+          <li role="presentation" ng-class="{active:projectsCtrl.isActiveTab(3)}">
+            <a  ng-click="projectsCtrl.selectedTab(3)" aria-controls="webapps" role="tab">Web Apps</a>
+           </li>
+           <li role="presentation" ng-class="{active:projectsCtrl.isActiveTab(4)}">
+            <a  ng-click="projectsCtrl.selectedTab(4)" aria-controls="games" role="tab">Games</a>
+           </li>
+           <li role="presentation" ng-class="{active:projectsCtrl.isActiveTab(5)}">
+            <a  ng-click="projectsCtrl.selectedTab(5)" aria-controls="animations" role="tab">Animations</a>
+           </li>
+        </ul>
+
+      </div>
+    </div>
+
+
+    <div class="row projects-row tab-content">
+      <div class="col-sm-4 well  tab-pane fade in active" 
+            ng-repeat="project in projectsCtrl.projects | filter: projectsCtrl.category">
+
+        <div class="">
+          <img class="thumbnail img-responsive project-img" ng-src="{{project.image_src}}" width="250" alt="{{project.title}}">
+       
+          <p> {{project.title}} <br> using {{project.tech}}. </p>
+        </div>
+       <a class="btn btn-primary" ng-href="{{project.code_url}}" target="_blank"> View code </a>
+       <a class="btn btn-success" ng-href="{{project.view_url}}" target="_blank"> View website </a>
+      </div>
+    </div>
+
+  </div>
+</div>

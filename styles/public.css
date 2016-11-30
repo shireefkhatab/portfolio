@@ -1,0 +1,157 @@
+
+html {
+
+	font-size: 16px;
+}
+body {
+	line-height: 2;
+	background-color: black;
+}
+.well, .panel-body, .list-group, .jumbotron {
+	color: black;
+}
+/* .media .media-heading {
+	font-family: 'gtek-tech';
+	text-decoration: underline;
+} */
+.about-content p{
+	margin-left: 0;
+	font-size: 1.3em;
+}
+/* .container-fluid {
+	
+} */
+/*navigation*/ 
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+  	margin-right: 15px;
+ 	margin-left: -15px;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .active > a {
+	color:#FFF;
+}
+.navbar-brand, .navbar-nav > li > a {
+ margin: 0 2em 0 0;
+}
+.navbar-brand, .navbar-nav > li > a.first {
+ //margin-left: 4em
+}
+.navbar-inverse .navbar-nav>li>a {
+	color: #8EE8CD;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav {
+width: auto;
+margin-left: 5%;
+}
+.nav-tabs {
+	margin-top: -40px;
+}
+.nav-tabs>li>a {
+	color: #8EE8CD;
+}
+.nav-tabs>li>a:hover {
+	color: #FFF;
+	background-color: #000;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	background-color: #000;
+	color: #FFF;
+}
+
+footer {
+	color: #FFFFFF;
+	font-family: 'great-vibes';
+}
+/* Home */
+
+.home {
+	background: gray center/150% url('../images/gray5.jpg');
+}
+
+.home-content {
+	text-align: center;
+	color:#FFF;
+}
+.home-content h1 {
+	padding-top:100px;
+	padding-bottom:15px;
+	font-family: 'Shrikhand';
+}
+.home-content h2 {
+	font-weight: bold;
+}
+.home-content img {
+	margin: 15px;
+}
+/* projects */
+.projects {
+	background: gray url('../images/gray5.jpg');
+	background-repeat: repeat-y;
+	background-size: 100% 10%;
+	color: #000;
+	
+}
+.projects-content {
+	text-align: center;
+}
+.projects-content h1 {
+	padding-top:50px;
+	font-family: 'spac3-tech';
+	font-weight: bold;
+	font-size: 3em;
+	color:#8ef4ff;
+}
+.projects-content .projects-row {
+	margin: 50px 20px;
+}
+.projects .project-img {
+	margin: 0 auto;
+} 
+.projects .well {
+	padding: 20px;
+	border-radius:5%;
+	border-right: 10px solid black;
+	border-left: 10px solid black;
+}
+
+/* About */
+.about {
+	 background: gray url('../images/about4.jpg');
+	 background-repeat: repeat-y;
+	background-size: 100% 30%;
+}
+.about-content {
+	background-color: rgba(200, 200, 200, 0.1);
+	color: white;
+	padding: 20px 0 0 20px;
+	color: #E4F6F8;
+
+}
+.about-media-body {
+	padding: 0 0 0 20px;
+}
+.about-header h1 {
+	font-family: 'Shrikhand';
+	text-align: center;
+	padding-top:50px;
+	padding-bottom:20px;
+	font-size: 2.8em;
+	color:#58e8bc;
+}
+.about .row1 {
+	margin: 0 15px 0 -20px;
+}
+.about .jumbotron {
+	//padding: 20px;
+}
+.about .jumbotron .thumbnail {
+	float: left;
+	margin: 0 20px 10px 0;
+}
+.about-content p{
+}
+.about-content .media-heading h3 {
+	color: #B6D8D7;
+}
