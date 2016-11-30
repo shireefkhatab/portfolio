@@ -44,7 +44,7 @@
 				{
 					title: 'Science quiz for children',
 					tech: 'jQuery & bootstrap',
-					image_src: 'images/projects/quiz.jpg',
+					image_src: 'images/projects/resized/quiz.jpg',
 					code_url: 'https://github.com/shireefkhatab/quiz',
 					view_url: 'https://shireefkhatab.github.io/quiz',
 					category: 'app favorite' 
