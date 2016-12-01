@@ -8,7 +8,7 @@
  * Controller of the public
  */
 angular.module('public')
-  .controller('contactCtrl', function () {
+  .controller('contactController', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

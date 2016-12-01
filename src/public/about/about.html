@@ -28,96 +28,108 @@
       </div>
     </div>
 
-    <div class="row" id="corporate">
-      <div class="col-xs-12">
+  <!--   <div class="row" id="corporate">
+    <div class="col-xs-12">
+   -->
+
         <!-- accordion -->
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-          <div class="panel panel-primary">
-            <div class="panel-heading" role="tab" id="headingOne">
+        
 
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <h4 class="panel-title"> What I can do. </h4>
-              </a>
-
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <ul class="panel-body">
-                  <li class="list-group-item"> I specialise in creating bespoke marketing information sites and small e-commerce (shop) websites. Tailored to marketing or selling your products/services successfully online.</li>
-                  <li class="list-group-item">I would appreciate a voluntarily work, (preferably remotely but not necessary) at the moment as i want to keep my study plans on track.</li>
-                </ul>
-            </div>
-          </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading" role="tab" id="headingTwo">
-
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <h4 class="panel-title"> What I hav studied </h4>
-              </a>
-
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-              <ul class="panel-body">
-                  <li class="list-group-item">HTML5</li>
-                  <li class="list-group-item">CSS</li>
-                  <li class="list-group-item">Bootstrap</li>
-                  <li class="list-group-item">Javascript</li>
-                  <li class="list-group-item">jQuery</li>
-                  <li class="list-group-item">processingJs</li>
-                  <li class="list-group-item">AngularJs</li>
-                  <li class="list-group-item">Basics of task runners (Gulp, Grunt, Yeoman) </li>
-                  <li class="list-group-item">Basics of NodeJs and ExpressJs</li>
-                  <li class="list-group-item">Basics of mongoDB</li>
-                  <li class="list-group-item">Basics of git and github</li>
-              </ul>
-            </div>
-          </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading" role="tab" id="headingThree">
-
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <h4 class="panel-title"> My future plans. </h4>
-              </a>
-
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                <ul class="panel-body">
-                  <li class="list-group-item"> </li>
-                  <li class="list-group-item"></li>
-                  <li class="list-group-item"> </li>
-                  <li class="list-group-item"></li>
-                  <li class="list-group-item"> </li>
-                  <li class="list-group-item"></li>
-                  <li class="list-group-item"> </li>
-                  <li class="list-group-item"></li>
-                </ul>
-            </div>
-          </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading" role="tab" id="headingFour">
-
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                <h4 class="panel-title"> More about me. </h4>
-              </a>
-
-            </div>
-            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-              <div class="panel-body">
-                <p> I decided to change my profession in October 2015, and dive into IT world as it is my favourite field.
-                  <br> it was a challenge for me to catch up with a lot of things in a very short time as i wasn`t graduated from any computer science colleage, add to this that the world is updating every day, however I bravely started to study online courses
-                  and found that I actually love programming! I decided to take the next step in web development and studied HTML, CSS, JS and some other technologies. By studying hard for long hours, joining courses after others, submitting assignments,
-                  meeting up with other developers, searching and reading I become confident enough to start my new career as a web developer. At the moment along with my continous study I work voluntarily with imax-design.com and keep my self engaged
-                  with new courses and projects all the time.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <script type="text/ng-template" id="group-template.html">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4 class="panel-title" style="color:#fa39c3">
+          <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+            <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+              {{heading}}
+            </span>
+          </a>
+        </h4>
       </div>
+      <div class="panel-collapse collapse" uib-collapse="!isOpen">
+        <div class="panel-body" style="text-align: right" ng-transclude></div>
+      </div>
+    </div>
+  </script>
+
+
+   <uib-accordion close-others="aboutCtrl.oneAtATime">
     
-	</div>
-	<!-- end of accordion -->
+    <div uib-accordion-group class="panel-primary" is-open="aboutCtrl.status.isCustomHeaderOpen" template-url="group-template.html">
+      <uib-accordion-heading>
+        What I can do. <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': aboutCtrl.status.isCustomHeaderOpen, 'glyphicon-chevron-right': !aboutCtrl.status.isCustomHeaderOpen}"></i>
+      </uib-accordion-heading>
+        <ul class="panel-body">
+        <li class="list-group-item"> I specialise in creating bespoke marketing information sites and small e-commerce (shop) websites. Tailored to marketing or selling your products/services successfully online.</li>
+        <li class="list-group-item">I would appreciate a voluntarily work, (preferably remotely but not necessary) at the moment as i want to keep my study plans on track.</li>
+      </ul>
+    </div>
+
+    <div uib-accordion-group class="panel-primary" is-open="aboutCtrl.status.isCustomHeaderOpen" template-url="group-template.html">
+      <uib-accordion-heading>
+        What I have studied. <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': aboutCtrl.status.isCustomHeaderOpen, 'glyphicon-chevron-right': !aboutCtrl.status.isCustomHeaderOpen}"></i>
+      </uib-accordion-heading>
+        <ul class="panel-body">
+      <li class="list-group-item">HTML5</li>
+      <li class="list-group-item">CSS</li>
+      <li class="list-group-item">Bootstrap</li>
+      <li class="list-group-item">Javascript</li>
+      <li class="list-group-item">jQuery</li>
+      <li class="list-group-item">processingJs</li>
+      <li class="list-group-item">AngularJs</li>
+      <li class="list-group-item">Basics of task runners (Gulp, Grunt, Yeoman) </li>
+      <li class="list-group-item">Basics of NodeJs and ExpressJs</li>
+      <li class="list-group-item">Basics of mongoDB</li>
+      <li class="list-group-item">Basics of git and github</li>
+    </ul>
+    </div>
+
+    <div uib-accordion-group class="panel-primary" is-open="aboutCtrl.status.isCustomHeaderOpen" template-url="group-template.html">
+      <uib-accordion-heading>
+        My future plans. <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': aboutCtrl.status.isCustomHeaderOpen, 'glyphicon-chevron-right': !aboutCtrl.status.isCustomHeaderOpen}"></i>
+      </uib-accordion-heading>
+         <ul class="panel-body">
+      <li class="list-group-item">Ecmascript 6</li>
+      <li class="list-group-item">typescript</li>
+      <li class="list-group-item">Angular2</li>
+      <li class="list-group-item">Nativescript</li>
+      <li class="list-group-item">ReactJs</li>
+      <li class="list-group-item">More on nodeJs</li>
+      <li class="list-group-item">More on mongoDB</li>
+      <li class="list-group-item">Scss & less</li>
+    </ul>
+    </div>
+
+    <div uib-accordion-group class="panel-primary" is-open="aboutCtrl.status.isCustomHeaderOpen" template-url="group-template.html">
+      <uib-accordion-heading>
+        More about me. <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': aboutCtrl.status.isCustomHeaderOpen, 'glyphicon-chevron-right': !aboutCtrl.status.isCustomHeaderOpen}"></i>
+      </uib-accordion-heading>
+        <div class="panel-body">
+        <p> I decided to change my profession in October 2015, and dive into IT world as it is my favourite field.
+          <br> it was a challenge for me to catch up with a lot of things in a very short time as i wasn`t graduated from any computer science colleage, add to this that the world is updating every day, however I bravely started to study online courses and
+          found that I actually love programming! I decided to take the next step in web development and studied HTML, CSS, JS and some other technologies. By studying hard for long hours, joining courses after others, submitting assignments, meeting
+          up with other developers, searching and reading I become confident enough to start my new career as a web developer. At the moment along with my continous study I work voluntarily with imax-design.com and keep my self engaged with new courses
+          and projects all the time.
+        </p>
+      </div>
+    </div>
+   
+  </uib-accordion>
+
+
+ <!--    </div>
+   end of accordion column
+   </div>
+   end of accordion row -->
 	
 	
+
+
+
+
+
+
+
 
       <div class="row">
         <div class="col-sm-12">
@@ -129,6 +141,18 @@
           </div>
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
   <!-- end of .about-content -->
 </div>

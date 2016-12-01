@@ -6,10 +6,19 @@ html {
 body {
 	line-height: 2;
 	background-color: black;
-	 height: 70%;
+	height: 70%;
 }
 .well, .panel-body, .list-group, .jumbotron {
 	color: black;
+}
+/* h4.panel {
+	background-color:#3072ab;
+} */
+.about div.panel-body, .about ul.panel-body {
+	text-align: left;
+}
+h4.panel-title a {
+	color: #FFF;
 }
 /* .media .media-heading {
 	font-family: 'gtek-tech';

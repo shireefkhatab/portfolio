@@ -11,7 +11,7 @@
 
 	angular
 	  .module('public', [
-	    'ui.router'
+	    'ui.router', 'ngAnimate', 'ngSanitize', 'ui.bootstrap'
 	  ])
 })();
 

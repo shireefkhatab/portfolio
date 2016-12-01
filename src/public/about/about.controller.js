@@ -8,10 +8,15 @@
  * Controller of the public
  */
 angular.module('public')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+
+
+.controller('AboutController', function () {
+ var aboutCtrl = this;
+  aboutCtrl.oneAtATime = true;
+
+  aboutCtrl.status = {
+    isCustomHeaderOpen: true,
+    isFirstOpen: false,
+    isFirstDisabled: true
+  };
+});

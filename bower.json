@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "homepage": "https://github.com/shireefkhatab/portfolio",
+  "authors": [
+    "Shireef Khatab <sherif_19@hotmail.co.uk>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

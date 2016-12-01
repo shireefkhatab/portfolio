@@ -8,7 +8,7 @@
  * Controller of the public
  */
 angular.module('public')
-  .controller('homeCtrl', function () {
+  .controller('HomeController', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
