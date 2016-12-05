@@ -8,29 +8,19 @@ body {
 	background-color: black;
 	height: 70%;
 }
-.well, .panel-body, .list-group, .jumbotron {
-	color: black;
-}
-/* h4.panel {
-	background-color:#3072ab;
-} */
+
 .about div.panel-body, .about ul.panel-body {
 	text-align: left;
 }
 h4.panel-title a {
 	color: #FFF;
 }
-/* .media .media-heading {
-	font-family: 'gtek-tech';
-	text-decoration: underline;
-} */
+
 .about-content p{
 	margin-left: 0;
 	font-size: 1.3em;
 }
-/* .container-fluid {
-	
-} */
+
 /*navigation*/ 
 .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
   	margin-right: 15px;
@@ -78,10 +68,13 @@ footer {
 	color: #FFFFFF;
 	font-family: 'great-vibes';
 }
+
+
+
 /* Home */
 
 .home {
-	background: gray center/150% url('../images/gray5.jpg');
+	background: black center/150% url('../images/gray5.jpg');
 	background-repeat: repeat-y;
 	background-size: contain;
 }
@@ -101,13 +94,13 @@ footer {
 .home-content img {
 	margin: 15px;
 }
+
 /* projects */
 .projects {
-	background: gray url('../images/gray5.jpg');
+	background: black url('../images/gray5.jpg');
 	background-repeat: repeat-y;
 	background-size: contain;
 	color: #000;
-	
 }
 .projects-content {
 	text-align: center;
@@ -125,25 +118,19 @@ footer {
 .projects .project-img {
 	margin: 0 auto;
 } 
-.projects .well {
+.projects-row .well  {
+	background: #82bdd8;
 	padding: 20px;
 	border-radius:5%;
-	border-right: 10px solid black;
-	border-left: 10px solid black;
+	border-right: 10px solid darkgray;
+	border-left: 10px solid darkgray;
 }
 
 /* About */
 .about {
-	 background: gray url('../images/about4.jpg');
+	 background: black url('../images/about4.jpg');
 	 background-repeat: repeat-y;
 	background-size: contain;
-}
-.about-content {
-	/* background-color: rgba(200, 200, 200, 0.1);
-	color: white;
-	padding: 20px 0 0 20px;
-	color: #E4F6F8; */
-
 }
 .about-media-body {
 	padding: 0 0 0 20px;
@@ -163,15 +150,15 @@ footer {
 .about .jumbotron {
 	padding: 20px 20px 0 20px;
 	border: 30px solid #3072AB;
+	border-radius: 5%;
 }
 .about .jumbotron .thumbnail {
 	float: left;
 	margin: 0 20px 0 0;
 }
-.about-content p {
-}
 .about-content .panel-title {
 	color: #FFF;
+	border-radius: 5%;
 }
 
 
