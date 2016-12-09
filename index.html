@@ -19,10 +19,20 @@
     <link href="fonts/digital-tech/digital-tech.otf" rel="stylesheet">
     <link href="fonts/gtek-tech/gtek-tech.ttf" rel="stylesheet">
     <link href="fonts/great-vibes/great-vibes.ttf" rel="stylesheet">
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     
-    <!-- <link rel="stylesheet" href="styles/app.css"> -->
-    <link rel="stylesheet" href="styles/public.css">
+    <link rel="stylesheet" href="styles/lightbox.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+<!-- 
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_Pgh80D0xJvfJQkBkAMYQT");
+       })();
+    </script> -->
     <!-- endbuild -->
+
   </head>
   <body>
     <!--[if lte IE 8]>
@@ -32,7 +42,7 @@
     <!-- Add your site or application content here -->
   <div class="header">
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
+      <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -45,7 +55,7 @@
               <div class="container-fluid">
                 <div class="navbar-header">-->
                   <a class="navbar-brand" ui-sref="app"  style="padding:0 0 0 10px;">
-                    <img alt="Brand" class="img-responsive" src="images/code3.jpg"  width="80">
+                    <img alt="Brand" class="img-responsive" src="images/background/code3.jpg"  width="80">
                   </a>
                 <!--</div>
               </div>
@@ -68,15 +78,60 @@
   </div>
 
 
-    <div class="container-fluid">
+    <div class="container">
         <ui-view></ui-view>
     </div>
 
-    <footer>
+
+
+  <footer class="row-footer ng-scope">
+        <div class="container">
+            <div class="row">             
+                <div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a ui-sref="app" href="#/">Home</a></li>
+                        <li><a ui-sref="app.aboutus" href="#/aboutus">About</a></li>
+                        <li><a ui-sref="app.menu" href="#/menu">Menu</a></li>
+                        <li><a ui-sref="app.contactus" href="#/contactus">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+                  121, Clear Water Bay Road<br>
+                  Clear Water Bay, Kowloon<br>
+                  HONG KONG<br>
+                  <i class="fa fa-phone"></i>: +852 1234 5678<br>
+                  <i class="fa fa-fax"></i>: +852 8765 4321<br>
+                  <i class="fa fa-envelope"></i>: 
+                         <a href="mailto:confusion@food.net">
+                         confusion@food.net</a>
+                    </address>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="nav navbar-nav" style="padding: 40px 10px;">
+                        <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <p style="padding:10px;"></p>
+                    <p align="center">© Copyright 2015 Ristorante Con Fusion</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <footer>
       <div class="container-fluid">
         <p>I <span class="glyphicon glyphicon-heart"></span> code</p>
       </div>
-    </footer>
+    </footer> -->
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -101,6 +156,7 @@
       <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
       <script src="lib/angular-animate/angular-animate.min.js"></script>
       <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+      
 
       <script src="src/app.module.js"></script>
 
@@ -108,6 +164,7 @@
       <script src="src/public/public.routes.js"></script>
 
       <script src="src/services/projects.service.js"></script>
+      <script src="src/services/awards.service.js"></script>
 
       <script src="src/public/home/home.controller.js"></script>
       <script src="src/public/about/about.controller.js"></script>
@@ -121,6 +178,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- lightbox Core JavaScript -->
+   <script src="lib/lightbox/dist/js/lightbox.min.js"></script>
 
     <!-- Script to Activate the Carousel -->
     <!-- <script>
@@ -129,6 +188,23 @@
     })
     </script> -->
 
+    <!-- Script for directtomx -->
+    <!-- <script src="lib/directtomx.js"></script> -->
+    
+    <!-- Script for EmailJs -->
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_Pgh80D0xJvfJQkBkAMYQT");
+       })();
+    </script>
+
+    <script>
+     
+    </script>
 
         <!-- endbuild -->
 </body>

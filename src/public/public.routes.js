@@ -40,8 +40,8 @@
       .state('awards', {
         url: '/awards',
         templateUrl: 'src/public/awards/awards.html',
-        controller: 'AwardController',
-        controllerAs: 'awardCtrl'
+        controller: 'AwardsController',
+        controllerAs: 'awardsCtrl'
       });
       
     };

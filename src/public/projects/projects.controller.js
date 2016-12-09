@@ -13,6 +13,7 @@ angular.module('public')
 
     	projectsCtrl.tab = 0;
     	projectsCtrl.category = '';
+        
     	projectsCtrl.selectedTab = function(tapNum){
     		projectsCtrl.tab = tapNum;
 

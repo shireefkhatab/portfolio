@@ -1,0 +1,281 @@
+
+html {
+	 height: 100%;
+	font-size: 16px;
+}
+body {
+	line-height: 2;
+	height: 100%;
+	background:  #2D2D2D center/150% url('../images/background/gray5.jpg');
+	background-repeat: repeat-y;
+	background-size: cover;
+	margin: 20px;
+}
+
+
+/*navigation*/ 
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+  	margin-right: 15px;
+ 	margin-left: -15px;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .active > a {
+	color:#FFF;
+}
+.navbar-brand, .navbar-nav > li > a {
+ margin: 0 3.5em 0 0;
+}
+.navbar-brand, .navbar-nav > li > a.first {
+ //margin-left: 4em
+}
+.navbar-inverse .navbar-nav>li>a {
+	color: #8EE8CD;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav {
+width: auto;
+margin-left: 5%;
+}
+
+footer {
+	color: #FFFFFF;
+	//font-family: 'great-vibes';
+}
+
+
+
+/* Home */
+
+/* .home {
+	background: black center/150% url('../images/gray5.jpg');
+	background-repeat: repeat-y;
+	background-size: cover;
+} */
+
+.home-content {
+	text-align: center;
+	color:#FFF;
+}
+.home-content h1 {
+	padding-top:10px;
+	padding-bottom:10px;
+	font-family: 'Shrikhand';
+}
+.home-content h2 {
+	font-weight: bold;
+}
+.home-content img {
+	//margin: 15px;
+}
+
+/* projects */
+.projects {
+	//background: black url('../images/gray5.jpg');
+	background-repeat: repeat-y;
+	background-size: contain;
+	color: #000;
+}
+.projects-content {
+	text-align: center;
+}
+.projects h1 {
+	padding: 10px 0 40px;
+	font-family: 'Spac3-tech';
+	font-weight: bold;
+	font-size: 3em;
+	color:#8ef4ff;
+	text-align: center;
+}
+.projects-content {
+	border: 1px solid #8EE8CD;
+	border-top: none;
+	border-bottom: none;
+}
+.projects-content .projects-row {
+	margin: 50px 20px;
+}
+.projects .project-img {
+	margin: 0 auto;
+} 
+.projects-row .well  {
+	background:  #73A6E4;
+	padding: 20px;
+	border-radius:5%;
+	border-right: 10px solid darkgray;
+	border-left: 10px solid darkgray;
+}
+
+/* Awards*/
+
+.awards {
+	//background: black url('../images/gray5.jpg');
+	background-repeat: repeat-y;
+	background-size: contain;
+	color: #000;
+}
+.awards-content {
+	text-align: center;
+}
+.awards h1 {
+	padding: 10px 0 40px;
+	font-family: 'Spac3-tech';
+	font-weight: bold;
+	font-size: 3em;
+	color:#8ef4ff;
+	text-align: center;
+}
+.awards-content {
+	border: 1px solid #8EE8CD;
+	border-top: none;
+	border-bottom: none;
+}
+.awards-content .awards-row {
+	margin: 50px 20px;
+}
+.awards .award-img {
+	margin: 0 auto;
+} 
+/* .awards .award-img:hover {
+  -webkit-transform: scale(3,2);
+  margin: 0 auto;
+} */
+.awards-row .well  {
+	background: #82bdd8;
+	padding: 20px;
+	border-radius:5%;
+	border-right: 10px solid darkgray;
+	border-left: 10px solid darkgray;
+}
+/* Gallery */
+.tab-content .thumbnails img {
+	transition: all 0.2s ease-in-out;
+}
+.tab-content:hover .thumbnails img {
+	opacity: 0.6;
+	transform: scale(0.90);
+}
+.tab-content .thumbnails:hover .thumbnail{
+	opacity: 1;
+}
+.tab-content .thumbnails img:hover {
+	transform: scale(1) rotate(2deg);
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+/* nav-tabs for projects and awards*/
+.nav-tabs {
+	margin-top: -24px;
+	border-bottom-color: #8EE8CD;
+}
+.nav-tabs>li>a {
+	color: #8EE8CD;
+}
+.nav-tabs>li>a:hover {
+	color: #FFF;
+	background-color: #000;
+	cursor: pointer;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	background-color: #000;
+	color: #FFF;
+	border: 1px solid #8EE8CD;
+	border-bottom-color: transparent;
+}
+
+/* About */
+.about {
+	 background: black url('../images/about/about.jpg');
+	 background-repeat: repeat-y;
+	background-size: contain;
+}
+.about-media-body {
+	padding: 0 0 0 20px;
+}
+.about-header h1 {
+	font-family: 'Shrikhand';
+	text-align: center;
+	padding-top:10px;
+	padding-bottom:50px;
+	font-size: 2.8em;
+	color:#000;
+	//background-color: rgba(255,255,255,0.2);
+}
+.about .row {
+	margin: 0 20px;
+}
+.about .jumbotron {
+	padding: 20px 20px 0 20px;
+	border: 30px solid #3072AB;
+	border-radius: 5%;
+}
+.about .jumbotron .thumbnail {
+	float: left;
+	margin: 0 20px 0 0;
+}
+.about-content .panel-title {
+	color: #FFF;
+	border-radius: 5%;
+}
+
+
+.about div.panel-body, .about ul.panel-body {
+	text-align: left;
+}
+h4.panel-title a {
+	color: #FFF;
+}
+
+.about-content p {
+	margin-left: 0;
+	font-size: 1.3em;
+}
+
+
+/* Contact */
+
+.contact h1 {
+	padding: 30px 0 5px;
+	font-family: 'Spac3-tech';
+	font-weight: bold;
+	font-size: 3em;
+	color:#8ef4ff;
+	text-align: center;
+}
+
+form {
+  width: 500px;
+  background: #73A6E4;
+  padding: 20px 25px;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  border-radius: 5%;
+}
+form input,
+form textarea {
+  font: inherit;
+  padding: 3px;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  background-color: lightyellow;
+}
+form button {
+  border: 1px solid rgba(0,0,0,0.5);
+  padding: 10px 20px;
+  font-size: 14px;
+  background:  #3072AB;
+  color: white;
+}
+form label {
+  color: #FFF;
+  font-size: 14px;
+  margin-bottom: 1px;
+  display: block;
+}
+
+
+footer {
+   margin: 50px 0;
+}
