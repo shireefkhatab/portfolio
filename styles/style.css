@@ -1,12 +1,14 @@
 
 html {
+	width:100%;
 	 height: 100%;
 	font-size: 16px;
 }
 body {
 	line-height: 2;
+	width:100%;
 	height: 100%;
-	background:  #2D2D2D center/150% url('../images/background/gray5.jpg');
+	background:  #2D2D2D center/100% url('../images/background/gray5.jpg');
 	background-repeat: repeat-y;
 	background-size: cover;
 	margin: 20px;
@@ -43,48 +45,29 @@ footer {
 	//font-family: 'great-vibes';
 }
 
-
-
-/* Home */
-
-/* .home {
-	background: black center/150% url('../images/gray5.jpg');
-	background-repeat: repeat-y;
-	background-size: cover;
-} */
-
-.home-content {
-	text-align: center;
-	color:#FFF;
-}
-.home-content h1 {
-	padding-top:10px;
-	padding-bottom:10px;
-	font-family: 'Shrikhand';
-}
-.home-content h2 {
-	font-weight: bold;
-}
-.home-content img {
-	//margin: 15px;
-}
-
-/* projects */
-.projects {
-	//background: black url('../images/gray5.jpg');
-	background-repeat: repeat-y;
-	background-size: contain;
-	color: #000;
-}
-.projects-content {
-	text-align: center;
-}
-.projects h1 {
-	padding: 10px 0 40px;
+/* Pages headers */
+.home h1, .projects h1, .about h1, .contact h1, .awards h1 {
+	margin-top: 80px;
+	margin-bottom: 30px;
 	font-family: 'Spac3-tech';
 	font-weight: bold;
 	font-size: 3em;
 	color:#8ef4ff;
+	text-align: center;
+}
+
+/* Home */
+.home {
+	text-align: center;
+	color:#FFF;
+}
+.home h2 , .home p {
+	font-weight: bold;
+	font-family: 'Spac3-tech';
+}
+
+/* projects */
+.projects {
 	text-align: center;
 }
 .projects-content {
@@ -95,10 +78,10 @@ footer {
 .projects-content .projects-row {
 	margin: 50px 20px;
 }
-.projects .project-img {
+.projects-content .project-img {
 	margin: 0 auto;
 } 
-.projects-row .well  {
+.projects-content .projects-row .well  {
 	background:  #73A6E4;
 	padding: 20px;
 	border-radius:5%;
@@ -107,22 +90,7 @@ footer {
 }
 
 /* Awards*/
-
-.awards {
-	//background: black url('../images/gray5.jpg');
-	background-repeat: repeat-y;
-	background-size: contain;
-	color: #000;
-}
 .awards-content {
-	text-align: center;
-}
-.awards h1 {
-	padding: 10px 0 40px;
-	font-family: 'Spac3-tech';
-	font-weight: bold;
-	font-size: 3em;
-	color:#8ef4ff;
 	text-align: center;
 }
 .awards-content {
@@ -136,10 +104,6 @@ footer {
 .awards .award-img {
 	margin: 0 auto;
 } 
-/* .awards .award-img:hover {
-  -webkit-transform: scale(3,2);
-  margin: 0 auto;
-} */
 .awards-row .well  {
 	background: #82bdd8;
 	padding: 20px;
@@ -147,7 +111,8 @@ footer {
 	border-right: 10px solid darkgray;
 	border-left: 10px solid darkgray;
 }
-/* Gallery */
+
+/* Gallery for projects and awards */
 .tab-content .thumbnails img {
 	transition: all 0.2s ease-in-out;
 }
@@ -162,9 +127,9 @@ footer {
 	transform: scale(1) rotate(2deg);
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-/* nav-tabs for projects and awards*/
+
+/* nav-tabs for projects and awards */
 .nav-tabs {
-	margin-top: -24px;
 	border-bottom-color: #8EE8CD;
 }
 .nav-tabs>li>a {
@@ -183,71 +148,44 @@ footer {
 }
 
 /* About */
-.about {
-	 background: black url('../images/about/about.jpg');
-	 background-repeat: repeat-y;
-	background-size: contain;
-}
-.about-media-body {
-	padding: 0 0 0 20px;
-}
-.about-header h1 {
-	font-family: 'Shrikhand';
-	text-align: center;
-	padding-top:10px;
-	padding-bottom:50px;
-	font-size: 2.8em;
-	color:#000;
-	//background-color: rgba(255,255,255,0.2);
-}
 .about .row {
 	margin: 0 20px;
 }
 .about .jumbotron {
+	margin-top: 20px;
 	padding: 20px 20px 0 20px;
-	border: 30px solid #3072AB;
+	border: 30px solid  #73A6E4;
 	border-radius: 5%;
 }
 .about .jumbotron .thumbnail {
 	float: left;
 	margin: 0 20px 0 0;
 }
-.about-content .panel-title {
-	color: #FFF;
+.about .panel-primary {
 	border-radius: 5%;
 }
-
-
+.about .panel-primary .panel-heading {
+	background: #73A6E4;
+}
+.about .panel-title {
+	padding: 5px;
+	color: #FFF;
+}
 .about div.panel-body, .about ul.panel-body {
 	text-align: left;
 }
-h4.panel-title a {
-	color: #FFF;
-}
-
-.about-content p {
+.about p {
 	margin-left: 0;
 	font-size: 1.3em;
 }
 
-
 /* Contact */
-
-.contact h1 {
-	padding: 30px 0 5px;
-	font-family: 'Spac3-tech';
-	font-weight: bold;
-	font-size: 3em;
-	color:#8ef4ff;
-	text-align: center;
-}
-
 form {
   width: 500px;
   background: #73A6E4;
   padding: 20px 25px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 50px;
   box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
   border-radius: 5%;
 }
@@ -262,11 +200,12 @@ form textarea {
   background-color: lightyellow;
 }
 form button {
-  border: 1px solid rgba(0,0,0,0.5);
-  padding: 10px 20px;
-  font-size: 14px;
-  background:  #3072AB;
-  color: white;
+	margin-top: -50px;
+	//border: 1px solid rgba(0,0,0,0.5);
+	padding: 5px 20px;
+	font-size: 14px;
+	background:  #3072AB;
+	color: white;
 }
 form label {
   color: #FFF;

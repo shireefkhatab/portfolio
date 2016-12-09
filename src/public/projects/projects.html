@@ -4,6 +4,7 @@
  <div class="row projects-row">
       <div class="col-sm-12">
 
+        <!-- nav-tabs -->
         <ul class="nav nav-tabs" role="tablist">
           <li ng-class="{active:projectsCtrl.isActiveTab(0)}"> <a ng-click="projectsCtrl.selectedTab(0)">All</a>          </li>
           <li ng-class="{active:projectsCtrl.isActiveTab(1)}"> <a ng-click="projectsCtrl.selectedTab(1)">My Favorites</a> </li>
@@ -15,12 +16,8 @@
           <!-- removed: li=> role="presentation"   li>a =>   aria-controls=".."  role="tab"   -->
       </div>
     </div>
-  <div class="projects-content">
-
-   
-
-    <!-- nav-tabs -->
     
+  <div class="projects-content">
     <!-- content -->
     <div class="row projects-row tab-content">
       <div class="col-sm-4 well  tab-pane fade in active" ng-repeat="project in projectsCtrl.projects | filter: projectsCtrl.category">
