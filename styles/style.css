@@ -39,7 +39,9 @@ body {
 width: auto;
 margin-left: 5%;
 }
-
+.navbar-inverse {
+	background: rgb(14, 78, 114);
+}
 footer {
 	color: #FFFFFF;
 	//font-family: 'great-vibes';
@@ -150,11 +152,12 @@ footer {
 /* About */
 .about .row {
 	margin: 0 20px;
+	text-align: left;
 }
 .about .jumbotron {
 	margin-top: 20px;
 	padding: 20px 20px 0 20px;
-	border: 30px solid  #73A6E4;
+	border: 10px solid  #73A6E4;
 	border-radius: 5%;
 }
 .about .jumbotron .thumbnail {
@@ -171,8 +174,48 @@ footer {
 	padding: 5px;
 	color: #FFF;
 }
-.about div.panel-body, .about ul.panel-body {
-	text-align: left;
+.about ul.panel-body {
+	//list-style-type: none;
+}
+.about ul.panel-body li{
+    float: left;
+    display: block;
+    margin-right: 10px;
+	width:auto;
+	border-radius: 50%;
+}
+.about ul.panel-body li:nth-child(1) {	/* html */
+	background-color: rgba(241, 101, 41, 0.8); 
+}
+.about ul.panel-body li:nth-child(2) {	/* css */
+	background-color: rgba(48, 173, 217, 0.8);
+}
+.about ul.panel-body li:nth-child(3) {	/* bootstrap */
+	background-color: rgba(95, 63, 139, 0.8);
+}
+.about ul.panel-body li:nth-child(4) {	/* js */
+	background-color: rgba(251, 182, 2, 0.8);
+}
+.about ul.panel-body li:nth-child(5) {	/* jquery */
+	background-color: rgba(8, 104, 171, 0.8);
+}
+.about ul.panel-body li:nth-child(6) {	/* angular */
+	background-color: rgba(253, 0, 33, 0.8);
+}
+.about ul.panel-body li:nth-child(7) {	/* processingJs */
+	background-color:rgba(29, 104, 146, 0.8);
+}
+.about ul.panel-body li:nth-child(8) {	/* github */
+	background-color: rgba(13, 38, 54, 0.4);
+}
+.about ul.panel-body li:nth-child(9) {	/* nodeJs */
+	background-color: rgba(140, 200, 75, 0.8);
+}
+.about ul.panel-body li:nth-child(10) {	/* mongoDB */
+	background-color: rgba(88, 170, 80, 0.8);
+}
+.about ul.panel-body li:nth-child(11) {	/* task runners */
+	background-color: rgba(251, 169, 25, 0.8);
 }
 .about p {
 	margin-left: 0;
@@ -189,6 +232,10 @@ form {
   box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
   border-radius: 5%;
 }
+form > h2 {
+	color: #078D1E;
+	font-weight: bold;
+}
 form input,
 form textarea {
   font: inherit;
@@ -201,9 +248,10 @@ form textarea {
 }
 form button {
 	margin-top: -50px;
-	//border: 1px solid rgba(0,0,0,0.5);
+	border: 1px solid rgba(0,0,0,0.5);
 	padding: 5px 20px;
 	font-size: 14px;
+	font-weight: bold;
 	background:  #3072AB;
 	color: white;
 }
