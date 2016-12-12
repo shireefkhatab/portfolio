@@ -106,7 +106,7 @@ footer {
 .awards .award-img {
 	margin: 0 auto;
 } 
-.awards-row .well  {
+.awards-content .awards-row .well  {
 	background: #82bdd8;
 	padding: 20px;
 	border-radius:5%;
@@ -156,32 +156,43 @@ footer {
 }
 .about .jumbotron {
 	margin-top: 20px;
-	padding: 20px 20px 0 20px;
+	padding: 0;
 	border: 10px solid  #73A6E4;
-	border-radius: 5%;
+	//border-radius: 5%;
 }
-.about .jumbotron .thumbnail {
-	float: left;
-	margin: 0 20px 0 0;
+.about img.thumbnail {
+	float: right;
+	margin: 0 0 0 1em;
+	padding: 0;
+	display: block;
+	//height: 28em;
 }
 .about .panel-primary {
-	border-radius: 5%;
+	
 }
 .about .panel-primary .panel-heading {
 	background: #73A6E4;
+	//border-radius: 2%;
+	text-align: center;
 }
 .about .panel-title {
 	//padding: 5px;
 	color: #FFF;
 }
+.about a.accordion-toggle{
+	text-decoration: none;
+}
 .about ul.panel-body {
-	//list-style-type: none;
+	list-style-type: none;
+	height: 100%;
+	overflow-y: scroll;
 }
 .about ul.panel-body li{
     float: left;
-    display: block;
+    display: inline-block;
     margin-right: 10px;
-	width:auto;
+	width:100%;
+	text-align: center;
 	border-radius: 50%;
 }
 .about ul.panel-body li:nth-child(1) {	/* html */
@@ -233,8 +244,9 @@ form {
   border-radius: 5%;
 }
 form > h2 {
-	color: #078D1E;
+	color: rgb(28, 31, 78);
 	font-weight: bold;
+	margin: 0;
 }
 form input,
 form textarea {

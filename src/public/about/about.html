@@ -6,7 +6,32 @@
       </div>
     </div>
     <div class="row row1">
-      <div class="col-sm-3">
+      <div class="col-sm-8 col-sm-push-2">
+        <div class="jumbotron">
+          <div class="panel panel-primary">
+            <div class="panel-heading"> 
+              <h3 class="about-header">Shireef Khatab</h3>
+            </div> 
+            <div class="panel-body">
+              <div>
+              <img class="img-responsive thumbnail" src="images/about/me3.jpg" alt="my photo" width="45%">
+              </div>
+              <p class=""> I’m a front end web developer based in london UK.<br>
+               I`m fascinated with front-end technologies and possibilities of HTML5 / CSS3 / JS.<br>
+                The large scope of my work is front end things like coding layouts, single page apps,
+                animation using CSS / JS. <br>But some times I get my hands dirty with some back end applications written in nodeJs / ExpressJs.
+                </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+                At the moment I would appreciate a voluntarily work (preferably remotely but not necessary) as I want to keep my study plans on track.
+              </p>
+            </div>
+              
+            </div>
+          </div>
+        </div>
+      <div class="col-sm-2 col-sm-pull-8">
           <div class="panel panel-primary">
             <div class="panel-heading">
               <h4>What I have studied.</h4>
@@ -26,27 +51,7 @@
             </ul>
           </div>
         </div>
-      <div class="col-sm-6">
-        <div class="jumbotron">
-          <div class="panel panel-primary">
-            <a class="" href="#"> 
-              <img class="img-responsive thumbnail" src="images/about/me3.jpg" alt="my photo" width="200">
-            </a>
-              
-            <div class="panel-heading"> 
-              <h2 class="about-header">Shireef Khatab</h2>
-            </div> 
-            <div class="panel-body">
-              <p class=""> I’m a front end web developer based in london UK.<br>
-               I am fascinated with front-end technologies and possibilities of HTML5 / CSS3 / Javascript.<br>
-                The large scope of my work is front end: coding layouts, single page apps (MVC, MVVM),
-                Angular JS + Node JS, animation CSS / JS. But some times I get my hands dirty with some back end applications written in nodeJs / ExpressJs.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
+      <div class="col-sm-2">
         <div class="panel panel-primary">
             <div class="panel-heading">
               <h4>My future plans.</h4>
@@ -62,26 +67,26 @@
                   <li class="list-group-item">More on mongoDB</li>
                   <li class="list-group-item">Scss & less</li>
                   <li class="list-group-item">3D Animations</li>
-                  <li class="list-group-item">Building Mobile apps with Javascript</li>
+                  <li class="list-group-item">Mobile apps</li>
               </ul>
             </div>
         </div>
     </div>
 
   <div class="row" id="corporate">
-    <div class="col-sm-12">
+    <div class=" col-sm-8 col-sm-offset-2">
   
         <!-- accordion -->
         
     <uib-accordion close-others="aboutCtrl.oneAtATime">
 
-      <div uib-accordion-group class="panel-primary" heading="What I can do." >
+      <!-- <div uib-accordion-group class="panel-primary" heading="What I can do." >
        <div class="panel-body">
           <p class="list-group-item"> I specialise in creating bespoke marketing information sites and small e-commerce (shop) websites. Tailored to marketing or selling your products/services successfully online.</p>
           <p class="list-group-item">I would appreciate a voluntarily work, (preferably remotely but not necessary) at the moment as i want to keep my study plans on track.</p>
         </div>
       </div>
-
+      
       <div uib-accordion-group class="panel-primary" heading="What I have studied." >
        <ul class="panel-body">
         <li class="list-group-item">HTML5</li>
@@ -108,13 +113,15 @@
         <li class="list-group-item">More on mongoDB</li>
         <li class="list-group-item">Scss & less</li>
       </ul>
-      </div>
-      <div uib-accordion-group class="panel-primary" heading="More about me" >
+      </div> -->
+      <div uib-accordion-group class="panel-primary">
+        <uib-accordion-heading>
+        More about me <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': aboutCtrl.status.isCustomHeaderOpen, 'glyphicon-chevron-right': !aboutCtrl.status.isCustomHeaderOpen}"></i>
+      </uib-accordion-heading>
        <div class="panel-body">
-          <p> I decided to change my profession in October 2015, and dive into IT world as it is my favourite field.
-            <br> it was a challenge for me to catch up with a lot of things in a very short time as i wasn`t graduated from any computer science colleage, add to this that the world is updating every day, however I bravely started to study online courses and
-            found that I actually love programming! I decided to take the next step in web development and studied HTML, CSS, JS and some other technologies. By studying hard for long hours, joining courses after others, submitting assignments, meeting
-            up with other developers, searching and reading I become confident enough to start my new career as a web developer. At the moment along with my continous study I work voluntarily with imax-design.com and keep my self engaged with new courses
+          <p> I decided to change my profession in October 2015, it was a challenge for me to catch up with a lot of things in a very short time, however I decided to do it, I started to study HTML, CSS, JS and some other technologies.
+           By studying hard for long hours, joining courses after others, submitting assignments, meeting
+            up with other developers and loads of searching I become confident enough to start my new career as a web developer. At the moment along with my continous study I work voluntarily with <a href="http://www.imax-design.com" target="blank"> imax-design.com </a> and keep my self engaged with new courses
             and projects all the time.
           </p>
         </div>
@@ -128,10 +135,10 @@
   
     <div class="col-sm-12">
       <div class="text-center">
-              <button class="btn btn-success btn-large" ui-sref="contact">Contact me</button>
+              <button class="btn btn-success btn-lg" ui-sref="contact">Hire me now!</button>
               <br>
               <br>
-              <button class="btn btn-primary" ui-sref="awards">See my awards</button>
+              <button class="btn btn-primary btn-md" ui-sref="awards">See my awards!</button>
       </div>
     </div>
   <!--  end of accordion row -->
