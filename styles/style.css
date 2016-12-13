@@ -83,7 +83,11 @@ footer {
 	font-weight: bold;
 	font-family: 'Spac3-tech';
 }
-
+.home #build {
+	max-width: 100%;
+	width: 60%;
+	min-width: 50%;
+}
 	
 /* Gallery for projects and awards */
 .tab-content .thumbnails img {
@@ -133,6 +137,7 @@ footer {
 /* Projects & Awards*/
 .projects, .awards {
 	text-align: center;
+	margin: 0 auto;
 }
 .projects-content, .awards-content {
 	margin-top: 20px;
