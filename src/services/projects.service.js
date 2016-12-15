@@ -11,7 +11,7 @@
 			var projects = [
 				{
 					title: 'Chinese restaurant template',
-					tech: 'AngularJs and bootstrap',
+					tech: 'AngularJs & bootstrap',
 					image_src: 'images/projects/resized/restaurant.jpg',
 					full_image_src: 'images/projects/resized/restaurant.jpg',
 					code_url: 'https://github.com/shireefkhatab/coursera-ng/tree/master/module-5-assignment',
@@ -20,7 +20,7 @@
 				},
 				{
 					title: 'Indian restaurant template',
-					tech: 'AngularJs and bootstrap',
+					tech: 'AngularJs & bootstrap',
 					image_src: 'images/projects/resized/confusion.jpg',
 					full_image_src: 'images/projects/resized/confusion.jpg',
 					code_url: 'https://github.com/shireefkhatab/indian-restaurant-template/',

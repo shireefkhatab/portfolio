@@ -1,4 +1,4 @@
-<div class="container awards">
+<div class="awards">
  <h1> <b> Acheivments <i> & <i> Awards! <b> </h1>
 
  <div class="row awards-row">
@@ -23,12 +23,12 @@
   <div class="awards-content">
     <!-- content -->
     <div class="row awards-row tab-content">
-      <div class="col-sm-4 well  tab-pane fade in active" ng-repeat="award in awardsCtrl.awards | filter: awardsCtrl.category">
+      <div class="col-sm-4 col-xl-3 award-column well  tab-pane fade in active" ng-repeat="award in awardsCtrl.awards | filter: awardsCtrl.category">
         <div class="thumbnails">
          <a href="{{award.full_image_src}}" data-lightbox="gallery"> <img class="thumbnail img-responsive award-img" ng-src="{{award.image_src}}" width="250" height="300" alt="{{award.title}}"> </a>
            <br>
           <p class="lead"> {{award.title}} </p>
-          <p> Site: <a ng-href="{{award.site}}" target="_blank"> {{award.site}} </a> </p>
+          <p> Site: <br> <a ng-href="{{award.site}}" target="_blank"> {{award.site}} </a> </p>
         </div>
       </div>
     </div>

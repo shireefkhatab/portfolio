@@ -1,4 +1,4 @@
-<div class="container projects">
+<div class="projects">
  <h1> Lets talk <b><i>Projects!<i><b> </h1>
 
  <div class="row projects-row">
@@ -20,7 +20,7 @@
   <div class="projects-content">
     <!-- content -->
     <div class="row projects-row tab-content">
-      <div class="col-sm-4 well  tab-pane fade in active" ng-repeat="project in projectsCtrl.projects | filter: projectsCtrl.category">
+      <div class="col-sm-4 col-xl-3 project-column well  tab-pane fade in active" ng-repeat="project in projectsCtrl.projects | filter: projectsCtrl.category">
 
         <div class="thumbnails">
          <a href="{{project.full_image_src}}" data-lightbox="gallery"> <img class="thumbnail img-responsive project-img" ng-src="{{project.image_src}}" width="250" alt="{{project.title}}"> </a>
