@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" ng-app="app" ng-strict-di>
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+	
+    <link href="fonts/spac3-tech/Spac3-tech.ttf" rel="stylesheet">
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	
+    <link rel="stylesheet" href="styles/main.min.css">
+	
+  </head>
+  <body>
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+  <div class="header">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" id="navbarToggle" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  <a class="navbar-brand" ui-sref="app"  style="padding:0 0 0 10px;">
+			<img alt="Brand" class="img-responsive" src="images/background/code2.jpg">
+		  </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="collapsable-nav">
+          <ul class="nav navbar-nav">
+            <li ui-sref-active="active"><a ui-sref="home" class="first">Home<span class="sr-only">(current)</span></a></li>
+            <li ui-sref-active="active"><a ui-sref="projects">Projects</a></li>
+            <li ui-sref-active="active"><a ui-sref="about">About</a></li>
+            <li ui-sref-active="active"><a ui-sref="contact">Contact</a></li>
+            <li ui-sref-active="active"><a ui-sref="awards">Awards</a></li>
+
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </div>
+
+
+    <div class="container content">
+        <ui-view></ui-view>
+    </div>
+  
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-xs-7">
+            <p class="pull-left"> Designed by <strong>Shireef Khatab</strong> </p>
+          </div>
+          <div class="col-xs-5">
+            <p class="pull-right"> © December 2017 </p>
+          </div>
+      </div>
+    </div>
+ </footer>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <!-- <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+ -->
+	
+	<script src="scripts/main.min.js"></script>
+    <!-- Script for collapsing the small menu nav when blur -->
+    <script>
+      $(function () { // Same as document.addEventListener("DOMContentLoaded"...
+
+          // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
+          $("#navbarToggle").blur(function (event) {
+            var screenWidth = window.innerWidth;
+            if (screenWidth < 768) {
+              $("#collapsable-nav").collapse('hide');
+            }
+          });
+        });
+    </script>
+
+      
+</body>
+</html>

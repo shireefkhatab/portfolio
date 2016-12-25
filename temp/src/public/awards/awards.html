@@ -1,0 +1,39 @@
+<div class="awards">
+ <h1> <b> Acheivments <i> & <i> Awards! <b> </h1>
+
+ <div class="row awards-row">
+      <div class="col-sm-12">
+    <!-- nav-tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li ng-class="{active:awardsCtrl.isActiveTab(0)}"> <a ng-click="awardsCtrl.selectedTab(0)">All</a>         </li>
+          <li ng-class="{active:awardsCtrl.isActiveTab(1)}"> <a ng-click="awardsCtrl.selectedTab(1)">HTML</a>
+          </li>
+          <li ng-class="{active:awardsCtrl.isActiveTab(2)}"> <a ng-click="awardsCtrl.selectedTab(2)">CSS</a>   
+          </li>
+          <li ng-class="{active:awardsCtrl.isActiveTab(3)}"> <a ng-click="awardsCtrl.selectedTab(3)">Javascript</a> </li>
+          <li ng-class="{active:awardsCtrl.isActiveTab(4)}"> <a ng-click="awardsCtrl.selectedTab(4)">AngularJs1</a> </li>
+          <li ng-class="{active:awardsCtrl.isActiveTab(5)}"> <a ng-click="awardsCtrl.selectedTab(5)">jQuery</a> 
+          </li>
+          <li ng-class="{active:awardsCtrl.isActiveTab(6)}"> <a ng-click="awardsCtrl.selectedTab(6)">Programming</a></li>
+        </ul>
+          <!-- removed: li=> role="presentation"   li>a =>   aria-controls=".."  role="tab"   -->
+      </div>
+    </div>
+
+  <div class="awards-content">
+    <!-- content -->
+    <div class="row awards-row tab-content">
+      <div class="col-sm-4 col-xl-3 award-column well  tab-pane fade in active" ng-repeat="award in awardsCtrl.awards | filter: awardsCtrl.category">
+        <div class="thumbnails">
+         <a href="{{award.full_image_src}}" data-lightbox="gallery"> <img class="thumbnail img-responsive award-img" ng-src="{{award.image_src}}" width="250" height="300" alt="{{award.title}}"> </a>
+           <br>
+          <p class="lead"> {{award.title}} </p>
+          <p> Site: <br> <a ng-href="{{award.site}}" target="_blank"> {{award.site}} </a> </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
