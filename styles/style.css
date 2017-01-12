@@ -284,8 +284,10 @@ form label {
   margin-bottom: 1px;
   display: block;
 }
-
-
+.form-group.required .control-label:after {
+  content:" *";
+  color:red;
+}
 
 
 

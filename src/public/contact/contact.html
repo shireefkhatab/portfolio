@@ -2,18 +2,35 @@
 
 	    <h1>Contact me!</h1>
 	   
-	    <form id="myform" method="post">
-	    	<h2 class="form-header">Get in touch</h2>
-			<label>Name</label>
-			<input type="text" name="Name" />
-			<label>Email</label>
-			<input type="text" name="Email" />
-			<label>Subject</label>
-			<input type="text" name="Subject" />
-			<label>Message</label>
-			<textarea type="text" name="Message"></textarea>
-			<br><br>
-			<button>
+	    <form id="myform" name="myform" method="post" ng-submit="contactCtrl.submitForm(true)" novalidate>
+	    	
+			<h2 class="form-header">Get in touch</h2>
+			
+			<div class="form-group">
+				<label class="control-label">Name</label>
+				<input class="form-control" type="text" name="Name"  placeholder="Optional"/>
+			</div>
+			
+			<div class="form-group has-feedback required" ng-class="{'has-error': (myform.Email.$error.required || myform.Email.$invalid) && !myform.Email.$pristine}">
+				<label class="control-label">Email</label>
+				<input class="form-control" ng-model="email"  type="email" name="Email" placeholder="A valid email address is required" 
+				ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required/>
+				<span class="help-block" ng-if="myform.Email.$error.required && !myform.Email.$pristine"> Email is required </span>
+				<span class="help-block" ng-message="pattern" ng-if="myform.Email.$invalid && !myform.Email.$error.required"> Email is not valid </span>
+			</div>
+			
+			<div class="form-group" ng-class="{'has-error': myform.Name.$error.required}">
+				<label class="control-label">Subject</label>
+				<input class="form-control" ng-model="subject"  type="text" name="Subject"   placeholder="Optional"/>
+			</div>
+			
+			<div class="form-group" ng-class="{'has-error': (myform.Message.$error.required || myform.Message.$invalid) && !myform.Message.$pristine}">
+				<label class="control-label">Message</label>
+				<textarea class="form-control" ng-model="message" type="text" name="Message" placeholder="Required" required></textarea>
+				<span class="help-block" ng-if="myform.Message.$error.required && !myform.Email.$pristine"> Message is required </span>
+			</div>
+				
+			<button ng-disabled="myform.$invalid">
 			Submit your message
 			</button>
 		</form>
@@ -27,9 +44,3 @@
 	   })();
 	</script>
 </div>
-
-   
-<!-- 
-	
-
- -->

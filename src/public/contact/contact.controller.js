@@ -2,10 +2,19 @@
 
 angular.module('public')
   .controller('ContactController', function () {
-  	var contactCtrl = this;
+  	
+	var contactCtrl = this;
 
+	contactCtrl.submitForm = function(isValid) {
 
-  	 var myform = $("form#myform");
+    // check to make sure the form is completely valid
+		if (isValid) {
+		  alert('our form is amazing');
+		}
+	}
+	
+	
+		var myform = $("form#myform");
         myform.submit(function(event){
 	        event.preventDefault();
 
@@ -28,6 +37,6 @@ angular.module('public')
 	          });
 	        return false;
 	    });
-
-        
+	 
+	 
   });
