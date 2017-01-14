@@ -24,7 +24,7 @@
 				<input class="form-control" ng-model="subject"  type="text" name="Subject"   placeholder="Optional"/>
 			</div>
 			
-			<div class="form-group" ng-class="{'has-error': (myform.Message.$error.required || myform.Message.$invalid) && !myform.Message.$pristine}">
+			<div class="form-group required" ng-class="{'has-error': (myform.Message.$error.required || myform.Message.$invalid) && !myform.Message.$pristine}">
 				<label class="control-label">Message</label>
 				<textarea class="form-control" ng-model="message" type="text" name="Message" placeholder="Required" required></textarea>
 				<span class="help-block" ng-if="myform.Message.$error.required && !myform.Email.$pristine"> Message is required </span>
